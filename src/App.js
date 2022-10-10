@@ -1,23 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import { Apexnavbar } from './components/navbar'
+import Homepage from './components/homepage'
+import Footer from './components/footer'
+import AboutUs from './components/aboutus'
+import TheTeam from './components/theteam'
+import ContactUs from './components/contactus'
+import {
+  BrowserRouter as Router,
+  Routes, Route, Link
+} from "react-router-dom"
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='main-style'>
+      <Apexnavbar />
+
+      <Routes>
+        <Route path="/" element={<Homepage />} />
+        <Route path="/aboutus" element={<AboutUs />} />
+        <Route path="/theteam" element={<TheTeam />} />
+        <Route path="/contactus" element={<ContactUs />} />
+      </Routes>
+
+      <Footer />
     </div>
   );
 }
