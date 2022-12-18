@@ -21,10 +21,10 @@ export const Apexnavbar = () => {
       <Container>
         <Navbar.Brand href="#home" style={logoStyle}>Apex</Navbar.Brand>
         <Nav className="me-auto">
-         <Nav.Link href="/">Home</Nav.Link>
-          <Nav.Link href="/aboutus">About Us</Nav.Link>
-          <Nav.Link href="/theteam">The Team</Nav.Link>
-          <Nav.Link href="/contactus">Contact Us</Nav.Link>
+          <Nav.Link className="nav-bar-button" href="/">Home</Nav.Link>
+          <Nav.Link  className="nav-bar-button" href="/aboutus">About Us</Nav.Link>
+          <Nav.Link  className="nav-bar-button" href="/theteam">The Team</Nav.Link>
+          <Nav.Link  className="nav-bar-button" href="/contactus">Contact Us</Nav.Link>
         </Nav>
       </Container>
     </Navbar>

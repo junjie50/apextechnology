@@ -1,3 +1,5 @@
+import {useEffect, useState} from 'react'
+
 const SplitScreen= ({left, right, shadeLeft}) => {
   const bottomStyle={
     width: "49.99999%",
@@ -8,7 +10,8 @@ const SplitScreen= ({left, right, shadeLeft}) => {
     paddingBottom: "90px",
     marginTop: "100px",
     margin: "20px",
-    textAlign: "center"
+    textAlign: "center",
+    borderRadius: 20
   }
 
   const leftStyle = shadeLeft? {...bottomStyle, backgroundColor:"#e9e9e9", color:"#000"}:bottomStyle
@@ -26,6 +29,18 @@ const SplitScreen= ({left, right, shadeLeft}) => {
   )
 }
 
+const Stats = () => {
+  return (
+    <div className="stats-container">
+      <h1>Established since 2021</h1><i></i>
+      <h1>{53}</h1><i></i>
+      <h3>Websites Added</h3>
+      <h1>{95}</h1><i></i>
+      <h3>90 Clients served</h3>
+    </div>
+  )
+}
+
 
 const AboutUs = () => {
   const style = {
@@ -35,11 +50,12 @@ const AboutUs = () => {
   }
   return (
     <div style={style}>
-      <div class="container-fluid">
+      <div className="container-fluid">
         <h2>About us</h2>
         <h4>Apex technology aims to provide dynamic web solutions to our clients,</h4>
         <h4>enabling them to utilize the internet for the next stage of growth.</h4>       
       </div>
+      <Stats />
       <SplitScreen left="MISSION" right="Providing efficient web solutions for clients." shadeLeft={true}/>
       <SplitScreen left="Helping clients to improve their productivity and outreach." right="VISION" shadeLeft={false}/>
     </div>

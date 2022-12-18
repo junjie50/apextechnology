@@ -44,9 +44,16 @@ const Announcement = () => {
       </div>
     </div>
   )
-}
+} 
 
 const Solutions = () => {
+  const imgStyle = {
+    height:"500px",
+    width:"640px",
+    textAlign:"center",
+    paddingLeft: "300",
+    paddingRight: "300"
+  }
   return (
     <div className="service-container">
       <h1>Services</h1>
@@ -60,15 +67,15 @@ const Solutions = () => {
         <div className="carousel-inner">
           <div className="carousel-item active">
             <h3>Websites</h3>
-            <img className="d-block w-100" src="websiteapp.png" alt="First slide"  height="400px" width="640px"/>
+            <img className="d-block w-100" src="websiteapp.png" alt="First slide" style={imgStyle}/>
           </div>
           <div className="carousel-item">
             <h3>Mobile Application</h3>
-            <img className="d-block w-100" src="mobileapp.png" alt="Second slide"  height="400px" width="640px"/>
+            <img className="d-block w-100" src="mobileapp.png" alt="Second slide"  style={imgStyle}/>
           </div>
           <div className="carousel-item">
             <h3>Customized Software</h3>
-            <img className="d-block w-100" src="softwareapp.png" alt="Third slide"  height="400px" width="640px"/>
+            <img className="d-block w-100" src="softwareapp.png" alt="Third slide"  style={imgStyle}/>
           </div>
         </div>
         <a className="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -116,7 +123,7 @@ const WeProvideTheBest = () => {
     <div style={bottomstyle}>
         <h4><strong>We work round the clock so that you don't have to.</strong></h4>
         <div>
-          <img  src="programmers.png" width="300" height="auto"></img>
+          <img src="programmers.png" width="300" height="auto"></img>
         </div>
     </div>
   )
